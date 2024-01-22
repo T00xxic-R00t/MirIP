@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Obtener IP Pública</title>
+</head>
+<body>
+    <center><h1>Tú Dirección IP:</h1></center>
+    <center><p id="userIp"> <strong>Obteniendo IP...</strong></p></center>
+    <br>
+    <center><button id="copyButton" onclick="copyToClipboard()"> <strong> Click to Copy</strong></button></center>
+
+
+    <script>
+        // Utilizamos una API de terceros para obtener la IP pública del visitante
+        fetch('https://api64.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                const ipAddress = data.ip;
+                document.getElementById('userIp').innerText = `${ipAddress} / ${data.ip}`;
+                document.getElementById('copyButton').removeAttribute('disabled');
+            })
+            .catch(error => {
+                console.error('Error al obtener la IP pública:', error);
+                document.getElementById('userIp').innerText = 'Error al obtener la IP pública, comprueba que estes conectado a internet';
+            });
+
+        // Función para copiar la dirección IP al portapapeles
+        function copyToClipboard() {
+            const ipText = document.getElementById('userIp');
+            const textarea = document.createElement('textarea');
+            textarea.value = ipText.innerText;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+            alert('Dirección IP copiada al portapapeles');
+        }
+    </script>
+</body>
+</html>
