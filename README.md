@@ -1,13 +1,3 @@
-
- _________   ___    ___ ___    ___ ___  ________                ________  _________   
-|\___   ___\|\  \  /  /|\  \  /  /|\  \|\   ____\              |\   __  \|\___   ___\ 
-\|___ \  \_|\ \  \/  / | \  \/  / | \  \ \  \___|  ____________\ \  \|\  \|___ \  \_| 
-     \ \  \  \ \    / / \ \    / / \ \  \ \  \    |\____________\ \   _  _\   \ \  \  
-      \ \  \  /     \/   /     \/   \ \  \ \  \___\|____________|\ \  \\  \|   \ \  \ 
-       \ \__\/  /\   \  /  /\   \    \ \__\ \_______\             \ \__\\ _\    \ \__\
-        \|__/__/ /\ __\/__/ /\ __\    \|__|\|_______|              \|__|\|__|    \|__|
-            |__|/ \|__||__|/ \|__|                                                    
-
 Este script constituye una aplicación web básica desarrollada con HTML, JavaScript (JS) y CSS, diseñada con el propósito de proporcionar a los usuarios la capacidad de visualizar su dirección IP pública de manera sencilla y rápida. 
 El diseño simple y la funcionalidad intuitiva hacen que la experiencia del usuario sea amigable y accesible.
 
